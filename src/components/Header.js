@@ -11,7 +11,8 @@ const Header = () => {
             borderBottom: "solid 3px",
             borderColor: "text",
             marginBottom: 20,
-            gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))'
+            gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
+            minWidth:"535px"
           }}
             gap={0}
             paddingBottom={0}
