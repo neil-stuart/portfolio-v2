@@ -8,9 +8,9 @@ const Header = () => {
     return (
         <Grid sx={{
             justifyContent: 'space-between',
-            "border-bottom": "solid 3px",
+            borderBottom: "solid 3px",
             borderColor: "text",
-            "margin-bottom": 20,
+            marginBottom: 20,
             gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))'
           }}
             gap={0}
