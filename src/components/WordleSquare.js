@@ -25,9 +25,9 @@ function WordleSquare(props) {
 
 
     const changeColor = (color) => {
-        if(color == 1){
+        if(color === 1){
             setBgColor("#264653");
-        }else if(color == 2){
+        }else if(color === 2){
             setBgColor("#faa307");
         }else{
             setBgColor("#2a9d8f")
@@ -40,7 +40,7 @@ function WordleSquare(props) {
         console.log("clicked")
 
         let newcolor = props.color+1;
-        if(newcolor == 4){
+        if(newcolor === 4){
             newcolor = 1
         }
         changeColor(newcolor);

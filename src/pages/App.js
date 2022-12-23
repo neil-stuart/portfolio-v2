@@ -11,8 +11,6 @@ import Wordle from "../components/Wordle"
 
 function IndexPage() {
 
-  const [possible_words, setPossibleWords] = useState([]);
-
 
   function updateWords() {
     fetch('http://localhost:5000/run_python_file', {

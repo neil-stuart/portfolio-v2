@@ -69,7 +69,7 @@ class Wordle extends Component {
         const newletters = this.state.letters;
         // if its a letter
 
-        if((e.key == 'Backspace') && (this.state.cursor-1>=-1)){
+        if((e.key === 'Backspace') && (this.state.cursor-1>=-1)){
             newletters[this.state.cursor] = '';
             this.setState({letters:newletters, cursor:this.state.cursor-1})
             this.updateWords()
