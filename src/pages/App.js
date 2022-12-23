@@ -1,5 +1,4 @@
 import * as React from "react"
-import { useState } from "react";
 import { Grid, Box, ThemeProvider, } from "theme-ui";
 import theme from "../styles/theme.js";
 import "../styles/global.css"
@@ -16,7 +15,7 @@ function IndexPage() {
       <Box bg="background" sx={{ 'width': "100%", 'height': "100%" }}>
 
         <main style={pageStyles} bg="background" >
-          <Header updateWords={updateWords} />
+          <Header />
 
           <Grid gap={4} sx={{
             marginLeft: "20px",
