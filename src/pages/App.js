@@ -11,16 +11,6 @@ import Wordle from "../components/Wordle"
 
 function IndexPage() {
 
-
-  function updateWords() {
-    fetch('http://localhost:5000/run_python_file', {
-      method: 'POST',
-      header: JSON.stringify({ arg: 'scard,21212' })
-    }).then(response => response.text())
-      .then(response => JSON.parse(response))
-      .then(response => setPossibleWords(response))
-  }
-
   return (
     <ThemeProvider theme={theme} >
       <Box bg="background" sx={{ 'width': "100%", 'height': "100%" }}>
