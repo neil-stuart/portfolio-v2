@@ -1,2 +1,2 @@
 web: npm run start
-api: python backend/server.py
+api: cd backend && gunicorn app:server
