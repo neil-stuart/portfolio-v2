@@ -86,7 +86,7 @@ class Wordle extends Component {
     }
 
     updateWords() {
-        fetch('http://localhost:5000/run_python_file', {
+        fetch('http://localhost:5000/api/wordl_guess', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

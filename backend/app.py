@@ -18,8 +18,8 @@ def not_found(e):
     return app.send_static_file('index.html')
 
 @cross_origin()
-@app.route('/run_python_file', methods=['POST', 'OPTIONS'])
-def run_python_file():
+@app.route('/api/wordl_guess', methods=['POST', 'OPTIONS'])
+def wordl_guess():
 
   data = request.get_data()
 
