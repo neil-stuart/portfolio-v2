@@ -2,12 +2,22 @@ from flask import Flask, request
 import subprocess
 from flask_cors import CORS, cross_origin
 import json
+import os
 
-app = Flask(__name__)
-CORS(app, support_credentials=True)
+app = Flask(__name__, static_folder='../build', static_url_path='/')
+CORS(app)
 
 
-@cross_origin(supports_credentials=True)
+@app.route('/')
+def index():
+    return app.send_static_file('index.html')
+
+
+@app.errorhandler(404)
+def not_found(e):
+    return app.send_static_file('index.html')
+
+@cross_origin()
 @app.route('/run_python_file', methods=['POST', 'OPTIONS'])
 def run_python_file():
 
@@ -23,12 +33,12 @@ def run_python_file():
 
 
   # Read the output from the file
-  with open('output.txt', 'r') as f:
+  with open('./output.txt', 'r') as f:
     output = f.read()
 
   return output
 
 
 if __name__=="__main__":
-
-  app.run(debug=True);
+  print(os.getcwd())
+  app.run();

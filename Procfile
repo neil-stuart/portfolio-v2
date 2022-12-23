@@ -1,2 +1,1 @@
-web: npm run start 
-api: cd backend && gunicorn app:server
+web: cd backend && gunicorn app:name
