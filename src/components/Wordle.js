@@ -72,14 +72,18 @@ class Wordle extends Component {
         if((e.key === 'Backspace') && (this.state.cursor-1>=-1)){
             newletters[this.state.cursor] = '';
             this.setState({letters:newletters, cursor:this.state.cursor-1})
-            this.updateWords()
+            if(this.state.cursor % 5 == 0){
+                this.updateWords()
+            }    
             return;
         }
 
         if((e.key.length === 1)&&(this.state.cursor+1<25)){
             newletters[this.state.cursor+1] = e.key.toUpperCase();
             this.setState({letters:newletters, cursor:this.state.cursor+1})
-            this.updateWords()
+            if(this.state.cursor % 5 == 0){
+                this.updateWords()
+            }    
             return;
         }
 
