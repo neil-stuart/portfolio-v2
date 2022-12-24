@@ -1,11 +1,9 @@
 from flask import Flask, request
 import subprocess
-from flask_cors import CORS, cross_origin
 import json
 import os
 
 app = Flask(__name__, static_folder='../build', static_url_path='/')
-CORS(app)
 
 
 @app.route('/')
@@ -17,7 +15,6 @@ def index():
 def not_found(e):
     return app.send_static_file('index.html')
 
-@cross_origin()
 @app.route('/api/wordl_guess', methods=['POST', 'OPTIONS'])
 def wordl_guess():
 
