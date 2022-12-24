@@ -2,19 +2,21 @@ import * as React from "react"
 import { Grid, Box, ThemeProvider, } from "theme-ui";
 import theme from "../styles/theme.js";
 import "../styles/global.css"
-import { pageStyles } from "../styles/defaultStyles.js";
+import { mobPageStyles, dtopPageStyles } from "../styles/defaultStyles.js";
 import Header from "../components/Header";
 import About from "../components/About";
 import Projects from "../components/Projects"
 import Wordle from "../components/Wordle"
+import { useMediaQuery } from '@mui/material';
 
 function IndexPage() {
+  const isSmallScreen = useMediaQuery('(max-width:768px)');
 
   return (
     <ThemeProvider theme={theme} >
       <Box bg="background" sx={{ 'width': "100%", 'height': "100%" }}>
 
-        <main style={pageStyles} bg="background" >
+        <main style={isSmallScreen ? mobPageStyles:dtopPageStyles} bg="background" >
           <Header />
 
           <Grid gap={4} sx={{
@@ -23,14 +25,14 @@ function IndexPage() {
             gridTemplateColumns: 'repeat(auto-fit, minmax(490px, 1fr))'
           }} paddingBottom={20} >
 
-            <About />
+            <About isSmallScreen={isSmallScreen} />
 
-            <Projects />
+            <Projects isSmallScreen={isSmallScreen} />
 
             
           </Grid>
 
-          <Wordle />
+          <Wordle isSmallScreen={isSmallScreen} />
           
         </main>
 

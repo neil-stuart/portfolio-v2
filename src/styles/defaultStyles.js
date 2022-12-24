@@ -25,13 +25,23 @@ export const headingAccentStyles = {
     textDecoration: "italic"
 }
 
-export const pageStyles = {
+export const dtopPageStyles = {
     height: "100%",
-    minWidth: "535px",
-    // minWidth: 1050,
-    paddingLeft: 120,
-    paddingTop: 15,
-    paddingRight: 120,
+    minWidth: "600px",
+    paddingLeft: "120px",
+    paddingTop: "15px",
+    paddingRight: "120px",
+    paddingBottom:"200px",
+    fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif",
+}
+  
+
+export const mobPageStyles = {
+    height: "100%",
+    minWidth: "300px",
+    paddingLeft: "15px",
+    paddingTop: "15px",
+    paddingRight: "15px",
     paddingBottom:"200px",
     fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif",
 }
