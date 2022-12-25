@@ -1,6 +1,6 @@
 
-import { Grid, Box, Button } from "theme-ui";
-import React, { Component, useEffect } from 'react';
+import { Grid, Box } from "theme-ui";
+import React, { Component } from 'react';
 import { headingStyles, headingAccentStyles } from '../styles/defaultStyles'
 import WordleSquare from "./WordleSquare";
 import WordBox from "./WordBox";
@@ -70,18 +70,21 @@ class Wordle extends Component {
         // if its a letter
 
         if((e.key === 'Backspace') && (this.state.cursor-1>=-1)){
+            const newcolors = this.state.colors;
+            newcolors[this.state.cursor] = 1;
             newletters[this.state.cursor] = '';
-            this.setState({letters:newletters, cursor:this.state.cursor-1})
-            if(this.state.cursor % 5 == 0){
+            this.setState({letters:newletters,colors:newcolors, cursor:this.state.cursor-1})
+            if(this.state.cursor % 5 === 0){
                 this.updateWords()
             }    
             return;
         }
 
         if((e.key.length === 1)&&(this.state.cursor+1<25)){
+            
             newletters[this.state.cursor+1] = e.key.toUpperCase();
             this.setState({letters:newletters, cursor:this.state.cursor+1})
-            if(this.state.cursor % 5 == 0){
+            if((this.state.cursor+2) % 5 === 0){
                 this.updateWords()
             }    
             return;
@@ -114,16 +117,19 @@ class Wordle extends Component {
     }
 
     squareClicked(i){
-        let current = this.state.colors[i];
-        current++;
-        if(current == 4){
-            current = 1
+        if(this.state.letters[i] !== ''){
+            let current = this.state.colors[i];
+            current++;
+            if(current === 4){
+                current = 1
+            }
+            let newcolors = this.state.colors
+            newcolors[i] = current 
+            this.setState({colors:newcolors})
+            this.updateWords()
+            return true;
         }
-        let newcolors = this.state.colors
-        newcolors[i] = current 
-        this.setState({colors:newcolors})
-        this.updateWords()
-
+        return false;
     }
 
     render() { 

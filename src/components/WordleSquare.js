@@ -1,5 +1,5 @@
-import { Box, __ThemeUIContext } from "theme-ui";
-import React, { useState, useEffect } from 'react';
+import { Box } from "theme-ui";
+import React, { useEffect, useState } from 'react';
 
 const boxStyle = {
     border: "4px solid",
@@ -34,18 +34,20 @@ function WordleSquare(props) {
         }
     }
 
-
+    useEffect(()=>{
+        if(props.letter === ''){
+            setBgColor("#264653");
+        }
+    },[props.letter])
 
     const handleClick = () => {
-        console.log("clicked")
-
-        let newcolor = props.color+1;
-        if(newcolor === 4){
-            newcolor = 1
+        if(props.squareClicked(props.pos)){
+            let newcolor = props.color+1;
+            if(newcolor === 4){
+                newcolor = 1
+            }
+            changeColor(newcolor);
         }
-        changeColor(newcolor);
-        
-        props.squareClicked(props.pos);
     }
 
     return ( <Box sx={boxStyle} onClick={handleClick} style={{backgroundColor:bgColor}}> {props.letter} </Box> );
