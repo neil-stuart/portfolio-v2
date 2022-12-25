@@ -15,7 +15,7 @@ def index():
 def not_found(e):
     return app.send_static_file('index.html')
 
-@app.route('/api/wordl_guess', methods=['POST', 'OPTIONS'])
+@app.route('/api/wordl_guess', methods=['POST'])
 def wordl_guess():
 
   data = request.get_data()
@@ -37,5 +37,4 @@ def wordl_guess():
 
 
 if __name__=="__main__":
-  print(os.getcwd())
   app.run();

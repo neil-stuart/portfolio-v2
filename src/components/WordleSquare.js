@@ -41,12 +41,13 @@ function WordleSquare(props) {
     },[props.letter])
 
     const handleClick = () => {
-        if(props.squareClicked(props.pos)){
+        if(props.letter !== ''){
             let newcolor = props.color+1;
             if(newcolor === 4){
                 newcolor = 1
             }
             changeColor(newcolor);
+            props.squareClicked(props.pos)
         }
     }
 
