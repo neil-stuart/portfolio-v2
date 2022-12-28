@@ -18,17 +18,17 @@ const aboutMeStyles = {
 function About() {
     return ( 
     <Box sx={boxBorderStyles}>
-        <Box style={headingStyles} color={"primary"}>
+        <Box sx={headingStyles} >
           About This Portfolio.
           <br />
-          <Box style={headingAccentStyles} color={"primary"}><i>What this website is for.</i></Box>
+          <Box sx={headingAccentStyles} ><i>What this website is for.</i></Box>
           <Box style={aboutMeStyles} color={"primary"} sx={{ paddingRight: "25px", paddingTop: "10px" }}>{aboutMe1}</Box>
         </Box>
-        <Box style={headingStyles} sx={{ paddingTop: "20px", overflow: "hidden" }} color={"primary"}>
+        <Box sx={{...headingStyles, paddingTop: "20px", overflow: "hidden" }} color={"primary"}>
           About Me.
           <br />
-          <Box style={headingAccentStyles} color={"primary"}><i>My current progress.</i></Box>
-          <Box style={aboutMeStyles} color={"primary"} sx={{ paddingRight: "25px", paddingTop: "10px" }}>{aboutMe2}</Box>
+          <Box sx={headingAccentStyles} ><i>My current progress.</i></Box>
+          <Box sx={{...aboutMeStyles, paddingRight: "25px", paddingTop: "10px" }}>{aboutMe2}</Box>
         </Box>
     </Box> );
 }

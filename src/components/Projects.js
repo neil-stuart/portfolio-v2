@@ -67,10 +67,10 @@ const projects = [
 function Projects() {
     return (             
             <Box sx={boxBorderStyles}>
-              <Box style={headingStyles} color={"primary"}>
+              <Box sx={headingStyles} >
                 Personal & Academic Projects.
                 <br />
-                <Box style={headingAccentStyles} color={"primary"}><i>Projects that I have completed.</i></Box>
+                <Box sx={headingAccentStyles}><i>Projects that I have completed.</i></Box>
 
               </Box>
               <Grid columns={2} gap="30px" justify="space-between" sx={{ margin: "60px", marginTop: "30px", justifyItems: "center" }}>
