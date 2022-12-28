@@ -74,9 +74,6 @@ class Wordle extends Component {
             newcolors[this.state.cursor] = 1;
             newletters[this.state.cursor] = '';
             this.setState({ letters: newletters, colors: newcolors, cursor: this.state.cursor - 1 })
-            if (this.state.cursor % 5 === 0) {
-                this.updateWords()
-            }
             return;
         }
 
@@ -91,7 +88,6 @@ class Wordle extends Component {
                 this.updateWords()
             }
 
-            return;
         }
 
     }
