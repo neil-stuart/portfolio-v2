@@ -18,10 +18,10 @@ const Header = () => {
             paddingBottom={0}
             marginTop={30}>
 
-            <Box style={headingStyles} color={"primary"} paddingBottom={20} >
+            <Box sx={headingStyles}  paddingBottom={20} >
               Portfolio.
               <br />
-              <Box style={headingAccentStyles} color={"primary"}>Electrical & Electronic Engineering Undergraduate.</Box>
+              <Box sx={headingAccentStyles} >Electrical & Electronic Engineering Undergraduate.</Box>
             </Box>
 
             <Grid columns={"10fr 1fr"}
