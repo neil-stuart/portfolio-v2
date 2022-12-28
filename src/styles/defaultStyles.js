@@ -49,8 +49,8 @@ export const mobilePageStyles = {
     
     maxWidth:"auto",
     fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif",
-    transformOrigin:"8vw 0",
-    transform:"scale(0.6)"
+    transformOrigin:"0 0",
+    transform:"scale(calc(100vw*(47/27500)-(63/2750)))"
 }
   
 

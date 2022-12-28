@@ -11,7 +11,7 @@ import { useMediaQuery } from '@mui/material';
 
 function IndexPage() {
   const isSmallScreen = useMediaQuery('(max-width:700px)');
-  const isverySmallScreen = useMediaQuery('(max-width:450px)');
+  const isverySmallScreen = useMediaQuery('(max-width:540px)');
 
   return (
     <ThemeProvider theme={theme} >
