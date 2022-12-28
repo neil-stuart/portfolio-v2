@@ -157,7 +157,7 @@ class Wordle extends Component {
                     </Grid>
                     <Box sx={thisBoxBorderStyles} style={listBoxStyle} color="text">
                         <Box style={{ minWidth: "100%" }} ><Box sx={headingStyles} style={{ textAlign: "center", marginBottom: "30px" }}>Suggested Answers.</Box></Box>
-                        <Box bg="secondary" sx={tagStyle}>{this.state.possibleWords.map((word, i) => <WordBox key={i} word={word} />)}</Box>
+                        <Box bg="secondary" sx={tagStyle}>{this.state.possibleWords.map((word) => <WordBox key={word} word={word} />)}</Box>
 
                     </Box>
 
