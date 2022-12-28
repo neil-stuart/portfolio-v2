@@ -25,7 +25,7 @@ export const headingAccentStyles = {
     textDecoration: "italic"
 }
 
-export const dtopPageStyles = {
+export const pageStyles = {
     height: "100%",
     minWidth: "600px",
     paddingLeft: "120px",
@@ -39,22 +39,22 @@ export const dtopPageStyles = {
   
 
 
-export const vsmallPageStyles = {
+export const mobilePageStyles = {
     height: "100%",
     minWidth: "600px",
-    paddingLeft: "0px",
+    paddingLeft: "15px",
     paddingTop: "15px",
-    paddingRight: "0px",
+    paddingRight: "15px",
     paddingBottom:"200px",
     
     maxWidth:"auto",
     fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif",
-    transformOrigin:"3vw 0",
+    transformOrigin:"8vw 0",
     transform:"scale(0.6)"
 }
   
 
-export const mobPageStyles = {
+export const smallPageStyles = {
 
 
     height: "100%",

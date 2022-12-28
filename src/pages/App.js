@@ -2,7 +2,7 @@ import * as React from "react"
 import { Grid, Box, ThemeProvider, } from "theme-ui";
 import theme from "../styles/theme.js";
 import "../styles/global.css"
-import { mobPageStyles, dtopPageStyles, vsmallPageStyles } from "../styles/defaultStyles.js";
+import { mobilePageStyles, pageStyles, smallPageStyles } from "../styles/defaultStyles.js";
 import Header from "../components/Header";
 import About from "../components/About";
 import Projects from "../components/Projects"
@@ -17,7 +17,7 @@ function IndexPage() {
     <ThemeProvider theme={theme} >
       <Box bg="background" sx={{ 'width': "100%", 'height': "100%" }}>
 
-        <main style={isverySmallScreen ? vsmallPageStyles:(isSmallScreen ? mobPageStyles:dtopPageStyles)} bg="background" >
+        <main style={isverySmallScreen ? mobilePageStyles:(isSmallScreen ? smallPageStyles:pageStyles)} bg="background" >
           <Header />
 
           <Grid gap={4} sx={{
