@@ -32,17 +32,40 @@ export const dtopPageStyles = {
     paddingTop: "15px",
     paddingRight: "120px",
     paddingBottom:"200px",
+    
+    maxWidth:"auto",
     fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif",
 }
   
 
-export const mobPageStyles = {
+
+export const vsmallPageStyles = {
     height: "100%",
-    minWidth: "300px",
+    minWidth: "600px",
+    paddingLeft: "0px",
+    paddingTop: "15px",
+    paddingRight: "0px",
+    paddingBottom:"200px",
+    
+    maxWidth:"auto",
+    fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif",
+    transformOrigin:"3vw 0",
+    transform:"scale(0.6)"
+}
+  
+
+export const mobPageStyles = {
+
+
+    height: "100%",
+    marginLeft:"0px",
     paddingLeft: "15px",
     paddingTop: "15px",
     paddingRight: "15px",
     paddingBottom:"200px",
     fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif",
+    minWidth:"0px",
+
+    
 }
   
