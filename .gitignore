@@ -16,7 +16,10 @@
 
 # misc
 backend/output.txt
-/backend/env
+backend/gather_words.py
+backend/words.txt
+
+backend/env
 .DS_Store
 
 .env.local
