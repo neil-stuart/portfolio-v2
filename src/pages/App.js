@@ -8,21 +8,10 @@ import About from "../components/About";
 import Projects from "../components/Projects"
 import Wordle from "../components/Wordle"
 import { useMediaQuery } from '@mui/material';
-import { useEffect, useState } from 'react';
+
 function IndexPage() {
   const isSmallScreen = useMediaQuery('(max-width:700px)');
   const isverySmallScreen = useMediaQuery('(max-width:540px)');
-  const [width, setWidth] = useState(window.innerWidth);
-
-  useEffect(() => {
-    const handleResize = () => setWidth(window.innerWidth);
-    window.addEventListener('resize', handleResize);
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-
-  const scaleAmount = (width*(47/27500)-(63/2750)).toString(3);
 
   return (
     

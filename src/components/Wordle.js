@@ -48,6 +48,12 @@ const listBoxStyle = {
 class Wordle extends Component {
     state = {}
 
+    divRef = React.createRef();
+
+    handleClick = () => {
+      this.divRef.current.focus();
+    };
+
     constructor(props) {
         super(props);
         this.updateWords = this.updateWords.bind(this);
@@ -139,7 +145,7 @@ class Wordle extends Component {
     render() {
         return (
 
-            <Grid sx={{}} style={{ marginLeft: "20px", marginRight: "20px", marginTop: "20px", minWidth: "535px" }}>
+            <Grid sx={{}} ref={this.divRef} onClick={this.handleClick} tabindex="0" style={{ marginLeft: "20px", marginRight: "20px", marginTop: "20px", minWidth: "535px" }}>
 
                 <Box style={{ minWidth: "100%" }} ><Box sx={headingStyles} style={{ textAlign: "center" }}>Wordle Solver.</Box></Box>
 
