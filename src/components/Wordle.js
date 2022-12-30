@@ -144,32 +144,33 @@ class Wordle extends Component {
 
     render() {
         return (
+            <div ref={this.divRef} onClick={this.handleClick} tabindex="0">
+                <Grid sx={{}}  style={{ marginLeft: "20px", marginRight: "20px", marginTop: "20px", minWidth: "535px" }}>
 
-            <Grid sx={{}} ref={this.divRef} onClick={this.handleClick} tabindex="0" style={{ marginLeft: "20px", marginRight: "20px", marginTop: "20px", minWidth: "535px" }}>
+                    <Box style={{ minWidth: "100%" }} ><Box sx={headingStyles} style={{ textAlign: "center" }}>Wordle Solver.</Box></Box>
 
-                <Box style={{ minWidth: "100%" }} ><Box sx={headingStyles} style={{ textAlign: "center" }}>Wordle Solver.</Box></Box>
-
-                <Box style={{ minWidth: "100%" }} ><Box sx={headingAccentStyles} style={{ textAlign: "center" }}><i>A solver for wordle using list comprehension, made using Python.<br />Feel free to open wordle and give it a go, type in your guesses so far and click the squares to set the colours.</i></Box></Box>
-
-
-                <Grid gap={4} sx={{
-                    marginTop: "20px",
-                    gridTemplateColumns: 'repeat(auto-fit, minmax(490px, 1fr))'
-                }}>
+                    <Box style={{ minWidth: "100%" }} ><Box sx={headingAccentStyles} style={{ textAlign: "center" }}><i>A solver for wordle using list comprehension, made using Python.<br />Feel free to open wordle and give it a go, type in your guesses so far and click the squares to set the colours.</i></Box></Box>
 
 
-                    <Grid style={{ gridTemplateColumns: "repeat(5, 80px)", gridTemplateRows: "repeat(5, 80px)", placeItems: "center", margin: "auto" }} color="text">
-                        {this.state.colors.map((color, i) => <WordleSquare squareClicked={this.squareClicked} key={i} pos={i} color={color} letter={this.state.letters[i]}></WordleSquare>)}
+                    <Grid gap={4} sx={{
+                        marginTop: "20px",
+                        gridTemplateColumns: 'repeat(auto-fit, minmax(490px, 1fr))'
+                    }}>
+
+
+                        <Grid style={{ gridTemplateColumns: "repeat(5, 80px)", gridTemplateRows: "repeat(5, 80px)", placeItems: "center", margin: "auto" }} color="text">
+                            {this.state.colors.map((color, i) => <WordleSquare squareClicked={this.squareClicked} key={i} pos={i} color={color} letter={this.state.letters[i]}></WordleSquare>)}
+                        </Grid>
+                        <Box sx={thisBoxBorderStyles} style={listBoxStyle} color="text">
+                            <Box style={{ minWidth: "100%" }} ><Box sx={headingStyles} style={{ textAlign: "center", marginBottom: "30px" }}>Suggested Answers.</Box></Box>
+                            <Box bg="secondary" sx={tagStyle}>{this.state.possibleWords.map((word) => <WordBox key={word} word={word} />)}</Box>
+
+                        </Box>
+
                     </Grid>
-                    <Box sx={thisBoxBorderStyles} style={listBoxStyle} color="text">
-                        <Box style={{ minWidth: "100%" }} ><Box sx={headingStyles} style={{ textAlign: "center", marginBottom: "30px" }}>Suggested Answers.</Box></Box>
-                        <Box bg="secondary" sx={tagStyle}>{this.state.possibleWords.map((word) => <WordBox key={word} word={word} />)}</Box>
-
-                    </Box>
 
                 </Grid>
-
-            </Grid>
+            </div>
 
         );
     }
