@@ -93,7 +93,7 @@ class Wordle extends Component {
     }
 
     updateWords() {
-        fetch('https://ns-portfolio.herokuapp.com/api/wordl_guess', {
+        fetch('https://neilstu.art/api/wordl_guess', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
