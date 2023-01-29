@@ -11,7 +11,7 @@ import GridTemplate from "../components/GridTemplate";
 import { useMediaQuery } from '@mui/material';
 
 function IndexPage() {
-  const isSmallScreen = useMediaQuery('(max-width:700px)');
+  const isSmallScreen = useMediaQuery('(max-width:53rem)');
 
   return (
     

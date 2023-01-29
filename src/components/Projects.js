@@ -73,7 +73,7 @@ function Projects() {
                 <Box sx={headingAccentStyles}><i>Projects that I have completed.</i></Box>
 
               </Box>
-              <Grid columns={2} gap="2.5rem" justify="space-between" sx={{ margin: "5rem", marginTop: "5rem", justifyItems: "center" }}>
+              <Grid   justify="space-between" sx={{ gridTemplateColumns: 'repeat(auto-fit, minmax(8rem, 1fr))', gap:"5rem", margin: "5rem", marginTop: "3rem", justifyItems: "center" }}>
                 {projects.map((project,i) => <ProjectBanner project={project} key={i} />)}
               </Grid>
             </Box> );

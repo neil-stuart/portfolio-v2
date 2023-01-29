@@ -140,7 +140,7 @@ class Wordle extends Component {
     render() {
         return (
 
-            <Grid sx={{}} style={{ marginLeft: "1.6rem", marginRight: "1.6rem", marginTop: "1.6rem" }}>
+            <Grid style={{ marginLeft: "1.6rem", marginRight: "1.6rem", marginTop: "1.6rem" }}>
 
                 <Box style={{ minWidth: "100%" }} ><Box sx={headingStyles} style={{ textAlign: "center" }}>Wordle Solver.</Box></Box>
 

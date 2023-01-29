@@ -6,7 +6,7 @@ export const headingStyles = {
 }
 
 export const boxBorderStyles = {
-    border:2,
+    borderWidth:"0.2rem",
     borderStyle: "solid", 
     borderColor: "accent",
     borderRadius: "1.25rem",
