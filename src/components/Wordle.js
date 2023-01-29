@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import { headingStyles, headingAccentStyles } from '../styles/defaultStyles'
 import WordleSquare from "./WordleSquare";
 import WordBox from "./WordBox";
+import GridTemplate from "./GridTemplate";
 
 const tagStyle = {
     display: "flex",
@@ -14,7 +15,7 @@ const tagStyle = {
     borderColor: "transparent",
     maxHeight: "300px",
     minHeight: "300px",
-    borderRadius: "20px",
+    borderRadius: "1.6rem",
     padding: "8px",
     overflow: "hidden",
     justifyContent: "center",
@@ -30,7 +31,7 @@ const thisBoxBorderStyles = {
     borderColor: "text",
     borderRadius: "15px",
     paddingTop: "5px",
-    paddingBottom: "20px",
+    paddingBottom: "1.6rem",
     height: "fit-content"
 }
 
@@ -39,7 +40,7 @@ const listBoxStyle = {
     marginRight: "40px",
     width: "100%",
     maxHeight: "500px",
-    borderRadius: "20px",
+    borderRadius: "1.6rem",
     overflow: "hidden",
     borderWidth: "2px",
     padding: "30px"
@@ -47,12 +48,6 @@ const listBoxStyle = {
 
 class Wordle extends Component {
     state = {}
-
-    divRef = React.createRef();
-
-    handleClick = () => {
-      this.divRef.current.focus();
-    };
 
     constructor(props) {
         super(props);
@@ -144,33 +139,28 @@ class Wordle extends Component {
 
     render() {
         return (
-            <div ref={this.divRef} onClick={this.handleClick} tabindex="0">
-                <Grid sx={{}}  style={{ marginLeft: "20px", marginRight: "20px", marginTop: "20px", minWidth: "535px" }}>
 
-                    <Box style={{ minWidth: "100%" }} ><Box sx={headingStyles} style={{ textAlign: "center" }}>Wordle Solver.</Box></Box>
+            <Grid sx={{}} style={{ marginLeft: "1.6rem", marginRight: "1.6rem", marginTop: "1.6rem" }}>
 
-                    <Box style={{ minWidth: "100%" }} ><Box sx={headingAccentStyles} style={{ textAlign: "center" }}><i>A solver for wordle using list comprehension, made using Python.<br />Feel free to open wordle and give it a go, type in your guesses so far and click the squares to set the colours.</i></Box></Box>
+                <Box style={{ minWidth: "100%" }} ><Box sx={headingStyles} style={{ textAlign: "center" }}>Wordle Solver.</Box></Box>
 
-
-                    <Grid gap={4} sx={{
-                        marginTop: "20px",
-                        gridTemplateColumns: 'repeat(auto-fit, minmax(490px, 1fr))'
-                    }}>
+                <Box style={{ minWidth: "100%" , marginBottom:"2rem" }} ><Box sx={headingAccentStyles} style={{ textAlign: "center" }}><i>A solver for wordle using list comprehension, made using Python.<br />Feel free to open wordle and give it a go, type in your guesses so far and click the squares to set the colours.</i></Box></Box>
 
 
-                        <Grid style={{ gridTemplateColumns: "repeat(5, 80px)", gridTemplateRows: "repeat(5, 80px)", placeItems: "center", margin: "auto" }} color="text">
-                            {this.state.colors.map((color, i) => <WordleSquare squareClicked={this.squareClicked} key={i} pos={i} color={color} letter={this.state.letters[i]}></WordleSquare>)}
-                        </Grid>
-                        <Box sx={thisBoxBorderStyles} style={listBoxStyle} color="text">
-                            <Box style={{ minWidth: "100%" }} ><Box sx={headingStyles} style={{ textAlign: "center", marginBottom: "30px" }}>Suggested Answers.</Box></Box>
-                            <Box bg="secondary" sx={tagStyle}>{this.state.possibleWords.map((word) => <WordBox key={word} word={word} />)}</Box>
+                <GridTemplate >
 
-                        </Box>
-
+                    <Grid style={{ gridTemplateColumns: "repeat(5, 5.4rem)", gridTemplateRows: "repeat(5, 5.4rem)", placeItems: "center", margin: "auto"}} color="text">
+                        {this.state.colors.map((color, i) => <WordleSquare squareClicked={this.squareClicked} key={i} pos={i} color={color} letter={this.state.letters[i]}/>)}
                     </Grid>
+                    
+                    <Box sx={thisBoxBorderStyles} style={listBoxStyle} color="text">
+                        <Box style={{ minWidth: "100%" }} ><Box sx={headingStyles} style={{ textAlign: "center", marginBottom: "2.5rem" }}>Suggested Answers.</Box></Box>
+                        <Box bg="secondary" sx={tagStyle}>{this.state.possibleWords.map((word) => <WordBox key={word} word={word} />)}</Box>
+                    </Box>
 
-                </Grid>
-            </div>
+                </GridTemplate>
+
+            </Grid>
 
         );
     }

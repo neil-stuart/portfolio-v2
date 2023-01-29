@@ -2,12 +2,13 @@ import { Box } from "theme-ui";
 import React, { useEffect, useState } from 'react';
 
 const boxStyle = {
-    border: "4px solid",
+    border: ".3rem solid",
+    transitionDuration:"0.45s",
     borderColor:"secondary",
-    borderRadius:"10px",
-    width:"80px",
-    height:"80px",
-    fontSize:"30px",
+    borderRadius:"0.8rem",
+    width:"5.4rem",
+    height:"5.4rem",
+    fontSize:"2.5rem",
     textAlign:"center",
     verticalAlign:"center",
     alignItems: "center",

@@ -8,6 +8,15 @@ body{
     margin:0;
     padding: 0;
 }
+@media (max-width: 48em) {
+    :root {
+      font-size: calc(1rem + ((1vw - 0.48rem) * 1.3889));
+      /* Where: 1.3889 = 100 * font-size_difference / viewport_width_difference */
+  
+      /* Safari resize fix */
+      min-height: 0vw;
+    }
+  }
 
 .button-div{
     display: grid;
@@ -27,9 +36,9 @@ body{
     padding-bottom: 15px;
 }
 
-* {
+/* * {
     transition-duration: 0.45s;
-}
+} */
 
 #gatsby-focus-wrapper{
     width: 100%;

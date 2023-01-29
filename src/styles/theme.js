@@ -16,11 +16,11 @@ const theme = {
 
         modes: {
             dark: {
-                text: "#FFFAF2",
-                background: "#353535",
+                text: "#D3D3D3",
+                background: "#2F2F2F",
                 secondary: "#19568E",
-                primary: "#FFFAF2",
-                accent: "#A5D6FF",
+                primary: "#D3D3D3",
+                accent: "#92C7D3",
             },
             light: {
                 text: "#353535",

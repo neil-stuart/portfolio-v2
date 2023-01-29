@@ -3,14 +3,14 @@ import { Box } from "theme-ui";
 import "../styles/projectBanner.css";
 
 const style = {
-    height: "160px",
-    width: "160px",
-    border: "0.5px solid",
+    height: "12rem",
+    width: "12rem",
+    border: "0.04rem solid",
     borderColor: "accent",
     padding: "0px",
     fontWeight: "bold",
-    borderRadius:"20px",
-    fontSize:14,
+    borderRadius:"1.66rem",
+    fontSize:"1.1rem",
     textAlign:"center"
 }
 
@@ -34,12 +34,12 @@ const tagStyle = {
     border: "1px solid",
     borderColor: "accent",
     
-    borderRadius:"20px",
-    padding: "8px",
+    borderRadius:"1.6rem",
+    padding: ".5rem",
     overflow:"hidden",
     justifyContent:"flex-start",
     alignContent:"flex-start",
-    fontSize:"12px",
+    fontSize:"1rem",
     userSelect:"none"
 }
 

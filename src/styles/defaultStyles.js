@@ -1,8 +1,7 @@
 export const headingStyles = {
     color: "text",
-    fontSize: 28,
-    minWidth: 300,
-    paddingLeft: 30,
+    fontSize: "2rem",
+    paddingLeft: "2rem",
     userSelect: "none"
 }
 
@@ -10,14 +9,14 @@ export const boxBorderStyles = {
     border:2,
     borderStyle: "solid", 
     borderColor: "accent",
-    borderRadius: "15px",
-    paddingTop: "20px",
-    paddingBottom: "30px",
+    borderRadius: "1.25rem",
+    paddingTop: "1.7rem",
+    paddingBottom: "2.5rem",
     height: "fit-content"
 }
 
 export const headingAccentStyles = {
-    fontSize: 16,
+    fontSize: "1.25rem",
     color:"text",
     width: "100%",
     marginBottom: 100,
@@ -27,42 +26,29 @@ export const headingAccentStyles = {
 
 export const pageStyles = {
     height: "100%",
-    minWidth: "600px",
-    paddingLeft: "120px",
-    paddingTop: "15px",
-    paddingRight: "120px",
-    paddingBottom:"200px",
+    minWidth: "50rem",
+    maxWidth: "200rem",
+    paddingLeft: "10rem",
+    paddingTop: "1rem",
+    paddingRight: "10rem",
+    paddingBottom:"17rem",
     
-    maxWidth:"auto",
     fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif",
 }
   
 
 
-export const mobilePageStyles = {
-    height: "100%",
-    minWidth: "600px",
-    paddingLeft: "15px",
-    paddingTop: "15px",
-    paddingRight: "15px",
-    paddingBottom:"200px",
-    
-    maxWidth:"auto",
-    fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif",
-    transformOrigin:"0 0",
-    transform:"scale(calc(100vw*(47/27500)-(63/2750)))"
-}
-  
+
 
 export const smallPageStyles = {
 
 
     height: "100%",
     marginLeft:"0px",
-    paddingLeft: "15px",
-    paddingTop: "15px",
-    paddingRight: "15px",
-    paddingBottom:"200px",
+    paddingLeft: ".75rem",
+    paddingTop: ".75rem",
+    paddingRight: ".75rem",
+    paddingBottom:".75rem",
     fontFamily: "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif",
     minWidth:"0px",
 

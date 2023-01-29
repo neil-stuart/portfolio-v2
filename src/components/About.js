@@ -6,7 +6,7 @@ const aboutMe1 = 'I created this portfolio to show my interest in science & engi
 const aboutMe2 = 'I am currently in second year of Electrical & Electronic Engineering at University of Galway. (22/23)'
 
 const aboutMeStyles = {
-    fontSize: 16,
+    fontSize: "1.2rem",
     width: "100%",
     marginBottom: 100,
     margin: 0,
@@ -22,13 +22,13 @@ function About() {
           About This Portfolio.
           <br />
           <Box sx={headingAccentStyles} ><i>What this website is for.</i></Box>
-          <Box style={aboutMeStyles} color={"primary"} sx={{ paddingRight: "25px", paddingTop: "10px" }}>{aboutMe1}</Box>
+          <Box style={{...aboutMeStyles,paddingRight: "2rem", paddingTop: "1rem"}} color={"primary"} >{aboutMe1}</Box>
         </Box>
-        <Box sx={{...headingStyles, paddingTop: "20px", overflow: "hidden" }} color={"primary"}>
+        <Box sx={{...headingStyles, paddingRight: "2rem", paddingTop: "1rem", overflow: "hidden" }} color={"primary"}>
           About Me.
           <br />
           <Box sx={headingAccentStyles} ><i>My current progress.</i></Box>
-          <Box sx={{...aboutMeStyles, paddingRight: "25px", paddingTop: "10px" }}>{aboutMe2}</Box>
+          <Box sx={{...aboutMeStyles,paddingRight: "2rem", paddingTop: "1rem" }}>{aboutMe2}</Box>
         </Box>
     </Box> );
 }

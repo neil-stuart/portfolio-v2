@@ -1,7 +1,7 @@
 import * as React from "react"
 import { Box } from "theme-ui";
 
-const tagTextStyle = {
+const WordBoxStyles = {
     width:"fit-content",
     height:"fit-content",
     padding:"3px",
@@ -14,7 +14,7 @@ const tagTextStyle = {
 
 function WordBox(props) {
     return ( 
-        <Box sx={tagTextStyle} color="background" bg="accent">{props.word}</Box>
+        <Box sx={WordBoxStyles} color="background" bg="accent">{props.word}</Box>
      );
 }
 
