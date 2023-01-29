@@ -1,8 +1,8 @@
 import * as React from "react"
-import { Box, ThemeProvider, } from "theme-ui";
+import { ThemeProvider, } from "theme-ui";
 import theme from "../styles/theme.js";
 import "../styles/global.css"
-import { mobilePageStyles, pageStyles, smallPageStyles } from "../styles/defaultStyles.js";
+import { pageStyles, smallPageStyles } from "../styles/defaultStyles.js";
 import Header from "../components/Header";
 import About from "../components/About";
 import Projects from "../components/Projects"

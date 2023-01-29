@@ -5,7 +5,7 @@ import "../styles/projectBanner.css";
 const style = {
     height: "12rem",
     width: "12rem",
-    border: "0.04rem solid",
+    border: "0.15rem solid",
     borderColor: "accent",
     padding: "0px",
     fontWeight: "bold",
