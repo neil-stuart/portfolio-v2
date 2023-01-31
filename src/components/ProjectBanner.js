@@ -31,7 +31,7 @@ const tagStyle = {
     height:"71%",
     width:"100%",
     flexFlow:"row wrap",
-    border: "1px solid",
+    border: ".05rem solid",
     borderColor: "accent",
     
     borderRadius:"1.6rem",

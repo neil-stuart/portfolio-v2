@@ -2,9 +2,9 @@ import { Box } from "theme-ui";
 import React, { useEffect, useState } from 'react';
 
 const boxStyle = {
-    border: ".3rem solid",
+    border: ".15rem solid",
     transitionDuration:"0.45s",
-    borderColor:"secondary",
+    borderColor:"accent",
     borderRadius:"0.8rem",
     width:"5.4rem",
     height:"5.4rem",

@@ -8,26 +8,26 @@ const theme = {
 
     colors: {
 
-        text: "#FFFAF2",
-        background: "#353535",
-        secondary: "#D9D9D9",
-        primary: "#FFFAF2",
-        accent: "#6EC7CC",
+        text: "#353535",
+        background: "#FFFAF2",
+        secondary: "#6EC7CC",
+        primary: "#353535",
+        accent: "#19568E",
 
         modes: {
-            dark: {
-                text: "#D3D3D3",
-                background: "#2F2F2F",
-                secondary: "#19568E",
-                primary: "#D3D3D3",
-                accent: "#92C7D3",
-            },
             light: {
                 text: "#353535",
                 background: "#FFFAF2",
                 secondary: "#6EC7CC",
                 primary: "#353535",
                 accent: "#19568E",
+            },
+            dark: {
+                text: "#D3D3D3",
+                background: "#2F2F2F",
+                secondary: "#19568E",
+                primary: "#D3D3D3",
+                accent: "#81aed3",
             }
         },
     },

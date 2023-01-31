@@ -13,37 +13,34 @@ const tagStyle = {
     flexFlow: "row wrap",
     border: "1px solid",
     borderColor: "transparent",
-    maxHeight: "300px",
-    minHeight: "300px",
+    minHeight: "22.5rem",
     borderRadius: "1.6rem",
-    padding: "8px",
+    padding: "0.7rem",
     overflow: "hidden",
     justifyContent: "center",
     alignContent: "center",
-    fontSize: "18px",
-    userSelect: "none",
-    marginBottom: "30px"
+    fontSize: "1.5rem",
+    userSelect: "none"
 }
 
 const thisBoxBorderStyles = {
     border: 0,
     borderStyle: "solid",
     borderColor: "text",
-    borderRadius: "15px",
-    paddingTop: "5px",
+    borderRadius: "1.3rem",
+    paddingTop: "0.4rem",
     paddingBottom: "1.6rem",
     height: "fit-content"
 }
 
 const listBoxStyle = {
     display: "inline-block",
-    marginRight: "40px",
+    marginRight: "3rem",
     width: "100%",
-    maxHeight: "500px",
     borderRadius: "1.6rem",
     overflow: "hidden",
-    borderWidth: "2px",
-    padding: "30px"
+    borderWidth: "0.16rem",
+    padding: "2.5rem",
 }
 
 class Wordle extends Component {
@@ -154,7 +151,7 @@ class Wordle extends Component {
                     </Grid>
                     
                     <Box sx={thisBoxBorderStyles} style={listBoxStyle} color="text">
-                        <Box style={{ minWidth: "100%" }} ><Box sx={headingStyles} style={{ textAlign: "center", marginBottom: "2.5rem" }}>Suggested Answers.</Box></Box>
+                        <Box style={{ minWidth: "100%" }} ><Box sx={headingStyles} style={{ textAlign: "center", marginBottom: "2rem" }}>Suggested Answers.</Box></Box>
                         <Box bg="secondary" sx={tagStyle}>{this.state.possibleWords.map((word) => <WordBox key={word} word={word} />)}</Box>
                     </Box>
 
