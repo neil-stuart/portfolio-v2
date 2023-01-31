@@ -8,11 +8,11 @@ const Header = () => {
     return (
         <Grid sx={{
             justifyContent: 'space-between',
-            borderBottom: "solid 3px",
+            borderBottom: "solid 0.33rem",
             borderColor: "text",
             marginBottom: 20,
-            gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
-            minWidth:"535px"
+            gridTemplateColumns: 'repeat(auto-fit, minmax(16rem, 1fr))',
+            minWidth:"45rem"
           }}
             gap={0}
             paddingBottom={0}
@@ -25,9 +25,9 @@ const Header = () => {
             </Box>
 
             <Grid columns={"10fr 1fr"}
-              marginRight={"45px"}
-              marginLeft={"45px"}
-              minWidth={"143px"}
+              marginRight={"3.5rem"}
+              marginLeft={"3.5rem"}
+              minWidth={"13rem"}
               paddingBottom={10}
               paddingTop={10}
             >
@@ -36,7 +36,7 @@ const Header = () => {
                   border: 2,
                   borderStyle: "solid",
                   borderColor: "primary",
-                  borderRadius: "10px"
+                  borderRadius: "0.8rem"
                 }} bg={"transparent"} color={"primary"}  >Resume</Button>
               </Box>
 
