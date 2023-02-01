@@ -1,3 +1,5 @@
+import { Hidden } from "@mui/material"
+
 export const headingStyles = {
     color: "text",
     fontSize: "2rem",
@@ -45,6 +47,7 @@ export const smallPageStyles = {
 
     height: "100%",
     marginLeft:"0px",
+    overflow:"hidden",
     paddingLeft: ".75rem",
     paddingTop: ".75rem",
     paddingRight: ".75rem",
