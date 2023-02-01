@@ -46,11 +46,11 @@ const tagStyle = {
 const tagTextStyle = {
     width:"fit-content",
     height:"fit-content",
-    padding:"3px",
-    margin:"4px",
-    marginTop:"4px",
-    borderRadius: "5px",
-    border: "1px solid",
+    padding:"0.25rem",
+    margin:"0.33rem",
+    marginTop:"0.33rem",
+    borderRadius: "0.38rem",
+    border: "0.08rem solid",
     borderColor: "background",
 }
 
