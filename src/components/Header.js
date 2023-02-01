@@ -6,13 +6,14 @@ import { headingStyles, headingAccentStyles } from '../styles/defaultStyles'
 const Header = () => {
     const [colorMode, setColorMode] = useColorMode();
     return (
+      <Box sx={{width:"100%"}}>
         <Grid sx={{
             justifyContent: 'space-between',
             borderBottom: "solid 0.33rem",
             borderColor: "text",
             marginBottom: 20,
-            gridTemplateColumns: 'repeat(auto-fit, minmax(16rem, 1fr))',
-            minWidth:"45rem"
+            
+            gridTemplateColumns: 'repeat(auto-fit, minmax(0, 1fr))'
           }}
             gap={0}
             paddingBottom={0}
@@ -27,7 +28,6 @@ const Header = () => {
             <Grid columns={"10fr 1fr"}
               marginRight={"3.5rem"}
               marginLeft={"3.5rem"}
-              minWidth={"13rem"}
               paddingBottom={10}
               paddingTop={10}
             >
@@ -56,6 +56,7 @@ const Header = () => {
             </Grid>
 
           </Grid>
+        </Box>
     )
 }
 export default Header
