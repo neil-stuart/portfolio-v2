@@ -7,7 +7,7 @@ import GridTemplate from "./GridTemplate";
 
 const tagStyle = {
   display: "flex",
-  height: "71%",
+  height: "50%",
   width: "auto",
   flexFlow: "row wrap",
   border: "1px solid",
@@ -32,16 +32,16 @@ const thisBoxBorderStyles = {
   paddingTop: "0.4rem",
   paddingBottom: "1.6rem",
   height: "fit-content",
-};
-
-const listBoxStyle = {
   display: "inline-block",
-  marginRight: "3rem",
-  width: "100%",
+  width: "93%",
   borderRadius: "1.6rem",
   overflow: "hidden",
   borderWidth: "0.16rem",
   padding: "2.5rem",
+};
+
+const listBoxStyle = {
+
 };
 
 class Wordle extends Component {
@@ -192,10 +192,9 @@ class Wordle extends Component {
         <GridTemplate>
           <Grid
             style={{
-              gridTemplateColumns: "repeat(5, 5.4rem)",
-              gridTemplateRows: "repeat(5, 5.4rem)",
+              gridTemplateColumns: "repeat(5, 14.5%)",
+              gridTemplateRows: "repeat(5, 5.7rem)",
               placeItems: "center",
-              margin: "auto",
             }}
             color="text"
           >

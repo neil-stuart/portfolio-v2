@@ -31,7 +31,7 @@ export const pageStyles = {
     minWidth: "50rem",
     maxWidth: "200rem",
     paddingLeft: "10rem",
-    paddingTop: "1rem",
+    paddingTop: "0.5rem",
     paddingRight: "10rem",
     paddingBottom:"17rem",
     

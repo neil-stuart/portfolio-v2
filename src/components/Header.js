@@ -22,7 +22,7 @@ const Header = () => {
             <Box sx={headingStyles}  paddingBottom={20} >
               Portfolio.
               <br />
-              <Box sx={headingAccentStyles} >Electrical & Electronic Engineering Undergraduate.</Box>
+              <Box sx={headingAccentStyles} >Electronic & Computer Engineering Undergraduate.</Box>
             </Box>
 
             <Grid columns={"10fr 1fr"}
