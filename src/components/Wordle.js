@@ -13,7 +13,7 @@ const tagStyle = {
   border: "1px solid",
   borderColor: "transparent",
   minHeight: "22.5rem",
-  
+
   maxHeight: "22.5rem",
   borderRadius: "1.6rem",
   padding: "0.7rem",
@@ -40,9 +40,7 @@ const thisBoxBorderStyles = {
   padding: "2.5rem",
 };
 
-const listBoxStyle = {
-
-};
+const listBoxStyle = {};
 
 class Wordle extends Component {
   state = {};
@@ -167,8 +165,6 @@ class Wordle extends Component {
     return (
       <Grid
         style={{
-          marginLeft: "1.6rem",
-          marginRight: "1.6rem",
           marginTop: "1.6rem",
         }}
       >
@@ -189,12 +185,20 @@ class Wordle extends Component {
           </Box>
         </Box>
 
-        <GridTemplate>
+        <GridTemplate
+          morestyle={{
+            placeItems: "center",
+            alignItems: "center",
+            textAlign: "center",
+            alignContent: "center",
+          }}
+        >
           <Grid
             style={{
               gridTemplateColumns: "repeat(5, 14.5%)",
               gridTemplateRows: "repeat(5, 5.7rem)",
-              placeItems: "center",
+              marginLeft:"7%",
+              maxWidth:"80rem"
             }}
             color="text"
           >
