@@ -47,6 +47,7 @@ export const smallPageStyles = {
 
     height: "100%",
     marginLeft:"0px",
+    width:"100%",
     overflow:"hidden",
     paddingLeft: ".75rem",
     paddingTop: ".75rem",
