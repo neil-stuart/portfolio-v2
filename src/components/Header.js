@@ -13,7 +13,7 @@ const Header = () => {
             borderColor: "text",
             marginBottom: 20,
             
-            gridTemplateColumns: 'repeat(auto-fit, minmax(0, 1fr))'
+            gridTemplateColumns: 'repeat(auto-fit, minmax(10rem, 1fr))'
           }}
             gap={0}
             paddingBottom={0}
