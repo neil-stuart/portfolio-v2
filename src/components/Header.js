@@ -37,7 +37,7 @@ const Header = () => {
                   borderStyle: "solid",
                   borderColor: "primary",
                   borderRadius: "0.8rem"
-                }} bg={"transparent"} color={"primary"}  >Resume</Button>
+                }} bg={"transparent"} color={"primary"}  >CV</Button>
               </Box>
 
               <Box className="switch-div">
