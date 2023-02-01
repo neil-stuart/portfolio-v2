@@ -198,7 +198,7 @@ class Wordle extends Component {
               gridTemplateColumns: "repeat(5, 14.5%)",
               gridTemplateRows: "repeat(5, 5.7rem)",
               marginLeft:"7%",
-              maxWidth:"80rem"
+              maxWidth:"100rem"
             }}
             color="text"
           >
